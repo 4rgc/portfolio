@@ -28,7 +28,7 @@ module.exports = {
     },
     screens: {
       tablet: "690px",
-      laptop: "756px",
+      laptop: "800px",
     },
     extend: {
       backgroundImage: {
