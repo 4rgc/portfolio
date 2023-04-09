@@ -1,3 +1,5 @@
+const { fontFamily } = require("tailwindcss/defaultTheme");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: "class",
@@ -19,6 +21,10 @@ module.exports = {
       lightMonochromatic: "#22736E",
       lightText: "#0C1F33",
       lightBg: "#96BFA4",
+    },
+    fontFamily: {
+      sans: ["var(--font-poppins)", ...fontFamily.sans],
+      mono: ["var(--font-firaMono)", ...fontFamily.mono],
     },
     screens: {
       tablet: "690px",
