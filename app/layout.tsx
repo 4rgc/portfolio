@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.variable} ${firaMono.variable} page bg-lightBg dark:bg-darkBg font-sans text-lightText dark:text-darkText`}
+        className={`${poppins.variable} ${firaMono.variable} page bg-lightBg dark:bg-darkBg font-sans text-lightText dark:text-darkText pb-6`}
       >
         <main className="container flex flex-col tablet:flex-row px-4">
           <Image
@@ -39,7 +39,7 @@ export default function RootLayout({
             width="378"
             height="762"
           />
-          <nav className="flex py-6 px-2 space-y-3 flex-col">
+          <nav className="flex py-7 px-2 space-y-3 flex-col">
             <Image
               src="logo-md-l.svg"
               alt="logo"
