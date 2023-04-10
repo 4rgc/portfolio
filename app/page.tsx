@@ -1,21 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import Portrait from "./components/portrait";
+import Headline from "./components/Headline";
 
 export default function Home() {
   return (
     <div className="grow">
       <div className="flex items-center pb-3 space-x-6">
-        <div className="space-y-3">
-          <h1 className="font-mono text-4xl font-medium">
-            Hi, I&apos;m Andrii.
-          </h1>
-          <p className="text-lg">
-            I{"'"}m an experienced <b>Full&nbsp;Stack&nbsp;Developer</b>{" "}
-            building scalable web applications for <b>50K+&nbsp;artists</b>{" "}
-            @&nbsp;Autodesk.
-          </p>
-        </div>
+        <Headline />
         <Portrait className="shrink-0 grow"/>
       </div>
       <div className="flex pb-5 space-x-2 tablet:flex-col tablet:space-y-2 tablet:space-x-0">
