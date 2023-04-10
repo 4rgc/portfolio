@@ -2,6 +2,7 @@ import Image from "next/image";
 import "./globals.css";
 import MenuItem from "./components/menuItem";
 import { ThemeProvider, TailwindBody } from "./contexts/theme";
+import ChangeThemeButton from "./components/changeTheme";
 
 export const metadata = {
   title: "Andrii Bohdan",
@@ -33,25 +34,28 @@ export default function RootLayout({
           />
           <main className="container flex flex-col py-7 px-4 space-y-2 laptop:min-w-laptop tablet:min-w-tablet tablet:flex-row tablet:space-y-0 tablet:space-x-2">
             <nav className="flex flex-col px-2 space-y-3">
-              <Image
-                src="logo-md-l.svg"
-                alt="logo"
-                width="0"
-                height="0"
-                className="w-11 h-11 dark:hidden tablet:w-16 tablet:h-16"
-              />
-              <Image
-                src="logo-md-d.svg"
-                alt="logo"
-                width="0"
-                height="0"
-                className="hidden w-11 h-11 dark:block tablet:w-16 tablet:h-16"
-              />
+              <div>
+                <Image
+                  src="logo-md-l.svg"
+                  alt="logo"
+                  width="0"
+                  height="0"
+                  className="w-11 h-11 dark:hidden tablet:w-16 tablet:h-16"
+                />
+                <Image
+                  src="logo-md-d.svg"
+                  alt="logo"
+                  width="0"
+                  height="0"
+                  className="hidden w-11 h-11 dark:block tablet:w-16 tablet:h-16"
+                />
+              </div>
               <div className="flex items-center space-x-4 tablet:flex-col tablet:items-start tablet:space-x-0 tablet:space-y-2">
                 <MenuItem text="home" />
                 <MenuItem text="experience" href="/experience" />
                 <MenuItem text="projects" href="/projects" />
                 <MenuItem text="blog" href="/contact" />
+                <ChangeThemeButton />
               </div>
             </nav>
             {children}
