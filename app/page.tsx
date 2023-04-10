@@ -1,8 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div>
+    <div className="grow">
       <div className="flex items-center pb-3 space-x-6">
         <div className="space-y-3">
           <h1 className="font-mono text-4xl font-medium">
@@ -10,8 +11,8 @@ export default function Home() {
           </h1>
           <p className="text-lg">
             I{"'"}m an experienced <b>Full&nbsp;Stack&nbsp;Developer</b>{" "}
-            building scalable web applications for{" "}
-            <b>50K+&nbsp;artists</b> @&nbsp;Autodesk.
+            building scalable web applications for <b>50K+&nbsp;artists</b>{" "}
+            @&nbsp;Autodesk.
           </p>
         </div>
         <div className="relative pr-3 pb-3 shrink-0 grow">
@@ -38,9 +39,9 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className="flex pb-5 tablet:flex-col">
-        <div className="flex flex-col space-y-2 tablet:flex-row">
-          <div className="flex space-x-3">
+      <div className="flex pb-5 space-x-2 tablet:flex-col tablet:space-y-2 tablet:space-x-0">
+        <div className="flex flex-col space-y-2 tablet:flex-row tablet:space-y-0 tablet:space-x-2">
+          <div className="flex space-x-3 flex-1">
             <Image
               src="education-l.svg"
               alt="education"
@@ -56,10 +57,10 @@ export default function Home() {
               className="hidden dark:block"
             />
             <span className="font-mono font-bold text-lightContrast font-sm dark:darkContrast">
-              BSc, Computer Science @&nbsp;York University
+            BSc, Computer Science<br/>@&nbsp;York University
             </span>
           </div>
-          <div className="flex space-x-3">
+          <div className="flex space-x-3 flex-1">
             <Image
               src="work-l.svg"
               alt="work"
@@ -75,7 +76,7 @@ export default function Home() {
               className="hidden dark:block"
             />
             <span className="font-mono font-bold text-lightContrast font-sm dark:darkContrast">
-              Software Developer @&nbsp;Autodesk
+            Software Developer<br/>@&nbsp;Autodesk
             </span>
           </div>
         </div>
@@ -95,9 +96,9 @@ export default function Home() {
               height="19"
               className="hidden dark:block"
             />
-            <span className="font-mono font-medium underline text-lightContrast font-sm dark:darkContrast">
+            <Link className="font-mono font-medium underline text-lightContrast font-sm dark:darkContrast" href="https://linkedin.com/in/andrii-bohdan" target="_blank">
               andrii-bohdan
-            </span>
+            </Link>
           </div>
           <div className="flex space-x-3">
             <Image
@@ -114,9 +115,9 @@ export default function Home() {
               height="19"
               className="hidden dark:block"
             />
-            <span className="font-mono font-medium underline text-lightContrast font-sm dark:darkContrast">
+            <Link className="font-mono font-medium underline text-lightContrast font-sm dark:darkContrast" href="https://github.com/4rgc" target="_blank">
               4rgc
-            </span>
+            </Link>
           </div>
           <div className="flex space-x-3">
             <Image
@@ -133,9 +134,9 @@ export default function Home() {
               height="19"
               className="hidden dark:block"
             />
-            <span className="font-mono font-medium underline text-lightContrast font-sm dark:darkContrast">
+            <Link className="font-mono font-medium underline text-lightContrast font-sm dark:darkContrast" href="mailto:bohdan.andrii@gmail.com" target="_blank">
               email
-            </span>
+            </Link>
           </div>
         </div>
       </div>
