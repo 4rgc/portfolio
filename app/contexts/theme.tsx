@@ -6,9 +6,13 @@ import {
   Context,
   createContext,
   useContext,
+  useState,
 } from "react";
 
-export const ThemeContext = createContext<"dark" | "light">("dark");
+type ThemeValue = "dark" | "light";
+export const ThemeContext = createContext<
+  [ThemeValue, React.Dispatch<ThemeValue>]
+>(["dark", () => {}]);
 
 type ThemeProviderProps = React.ProviderProps<typeof ThemeContext>;
 type ThemeProviderPropsPartial = Partial<Pick<ThemeProviderProps, "value">> &
@@ -17,7 +21,11 @@ type ThemeProviderPropsPartial = Partial<Pick<ThemeProviderProps, "value">> &
 export const ThemeProvider: React.FC<ThemeProviderPropsPartial> = ({
   children,
 }) => {
-  return <ThemeContext.Provider value="dark">{children}</ThemeContext.Provider>;
+  const themeState = useState<ThemeValue>("dark");
+
+  return (
+    <ThemeContext.Provider value={themeState}>{children}</ThemeContext.Provider>
+  );
 };
 
 const firaMono = Fira_Mono({
@@ -37,7 +45,7 @@ export const TailwindBody: React.FC<ComponentPropsWithoutRef<"div">> = ({
   className,
   children,
 }) => {
-  const theme = useContext(ThemeContext);
+  const [theme] = useContext(ThemeContext);
 
   return (
     <body
