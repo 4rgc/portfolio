@@ -28,9 +28,13 @@ module.exports = {
     },
     screens: {
       tablet: "690px",
-      laptop: "800px",
+      laptop: "900px",
     },
     extend: {
+      minWidth: {
+        tablet: "690px",
+        laptop: "800px"
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
