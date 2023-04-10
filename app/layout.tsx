@@ -18,8 +18,15 @@ export default function RootLayout({
       <ThemeProvider>
         <TailwindBody className="flex overflow-x-hidden justify-center pb-6">
           <Image
-            className="hidden flex-1 my-auto laptop:block min-w-[378px] h-[762px]"
+            className="hidden flex-1 my-auto dark:hidden laptop:block min-w-[378px] h-[762px]"
             src="left-shapes-l.svg"
+            alt="shapes left"
+            width="378"
+            height="762"
+          />
+          <Image
+            className="hidden flex-1 my-auto min-w-[378px] h-[762px] dark:laptop:block"
+            src="left-shapes-d.svg"
             alt="shapes left"
             width="378"
             height="762"
@@ -31,7 +38,14 @@ export default function RootLayout({
                 alt="logo"
                 width="0"
                 height="0"
-                className="w-11 h-11 tablet:w-16 tablet:h-16"
+                className="w-11 h-11 dark:hidden tablet:w-16 tablet:h-16"
+              />
+              <Image
+                src="logo-md-d.svg"
+                alt="logo"
+                width="0"
+                height="0"
+                className="hidden w-11 h-11 dark:block tablet:w-16 tablet:h-16"
               />
               <div className="flex items-center space-x-4 tablet:flex-col tablet:items-start tablet:space-x-0 tablet:space-y-2">
                 <MenuItem text="home" />
@@ -43,8 +57,15 @@ export default function RootLayout({
             {children}
           </main>
           <Image
-            className="hidden flex-1 my-auto laptop:block min-w-[378px] h-[762px]"
+            className="hidden flex-1 my-auto dark:hidden laptop:block min-w-[378px] h-[762px]"
             src="right-shapes-l.svg"
+            alt="shapes right"
+            width="378"
+            height="762"
+          />
+          <Image
+            className="hidden flex-1 my-auto min-w-[378px] h-[762px] dark:laptop:block"
+            src="right-shapes-d.svg"
             alt="shapes right"
             width="378"
             height="762"

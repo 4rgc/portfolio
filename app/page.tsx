@@ -14,7 +14,7 @@ export default function Home() {
           <IconText
             className="flex-1"
             svgIconName="education"
-            textStyle="font-mono font-bold text-lightContrast font-sm dark:darkContrast"
+            textStyle="font-mono font-bold text-lightContrast font-sm dark:text-darkContrast"
           >
             BSc, Computer Science
             <br />
@@ -23,7 +23,7 @@ export default function Home() {
           <IconText
             className="flex-1"
             svgIconName="work"
-            textStyle="font-mono font-bold text-lightContrast font-sm dark:darkContrast"
+            textStyle="font-mono font-bold text-lightContrast font-sm dark:text-darkContrast"
           >
             Software Developer
             <br />
@@ -33,19 +33,19 @@ export default function Home() {
         <div className="flex flex-col justify-between tablet:justify-normal tablet:space-x-20 tablet:flex-row shrink-0">
           <IconText
             text="andrii-bohdan"
-            textStyle="font-mono font-medium underline text-lightContrast font-sm dark:darkContrast"
+            textStyle="font-mono font-medium underline text-lightContrast font-sm dark:text-darkContrast"
             svgIconName="linkedin"
             linkUrl="https://linkedin.com/in/andrii-bohdan"
           />
           <IconText
             text="4rgc"
-            textStyle="font-mono font-medium underline text-lightContrast font-sm dark:darkContrast"
+            textStyle="font-mono font-medium underline text-lightContrast font-sm dark:text-darkContrast"
             svgIconName="github"
             linkUrl="https://github.com/4rgc"
           />
           <IconText
             text="email"
-            textStyle="font-mono font-medium underline text-lightContrast font-sm dark:darkContrast"
+            textStyle="font-mono font-medium underline text-lightContrast font-sm dark:text-darkContrast"
             svgIconName="email"
             linkUrl="mailto:bohdan.andrii@gmail.com"
           />
