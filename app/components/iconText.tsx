@@ -21,20 +21,22 @@ const IconText: React.FC<IconTextProps> = (props) => {
 
   return (
     <div className={`flex space-x-3 ${className}`} {...rest}>
-      <Image
-        src={`${svgIconName}-l.svg`}
-        alt="education"
-        width="19"
-        height="19"
-        className="dark:hidden"
-      />
-      <Image
-        src={`${svgIconName}-d.svg`}
-        alt="education"
-        width="19"
-        height="19"
-        className="hidden dark:block"
-      />
+      <div className="my-auto">
+        <Image
+          src={`${svgIconName}-l.svg`}
+          alt="education"
+          width="19"
+          height="19"
+          className="dark:hidden"
+        />
+        <Image
+          src={`${svgIconName}-d.svg`}
+          alt="education"
+          width="19"
+          height="19"
+          className="hidden ml-0 dark:block"
+        />
+      </div>
       {linkUrl ? (
         <Link className={textStyle} href={linkUrl} target="_blank">
           {text || children}
