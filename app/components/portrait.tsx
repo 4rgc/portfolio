@@ -1,12 +1,12 @@
-import Image from "next/image";
+import Image from 'next/image';
 
-interface PortraitProps extends React.ComponentPropsWithoutRef<"div"> {}
+interface PortraitProps extends React.ComponentPropsWithoutRef<'div'> {}
 
 const Portrait: React.FC<PortraitProps> = (props) => {
-  const {className, ...rest} = props;
+  const { className, ...rest } = props;
 
   return (
-    <div className={ `relative pr-3 pb-3 ${className}` } {...rest}>
+    <div className={`relative pr-3 pb-3 ${className}`} {...rest}>
       <Image
         src="/portrait.jpg"
         alt="portrait"

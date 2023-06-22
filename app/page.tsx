@@ -1,6 +1,6 @@
-import Portrait from "./components/portrait";
-import Headline from "./components/Headline";
-import IconText from "./components/iconText";
+import Portrait from './components/portrait';
+import Headline from './components/Headline';
+import IconText from './components/iconText';
 
 export default function Home() {
   return (
@@ -59,13 +59,13 @@ export default function Home() {
         <br />
         My expertise includes developing complex web UIs using <b>
           React
-        </b> and <b>Next.js</b>, building robust back-ends with{" "}
+        </b> and <b>Next.js</b>, building robust back-ends with{' '}
         <b>Express.js</b> or <b>Ruby on Rails</b>, implementing secure
         authentication and authorization systems, and optimizing the performance
         and stability of <b>Node.js</b> tooling.
         <br />
         <br />I also confidently navigate the integration and deployment realm
-        including <b>Jenkins</b>, <b>GitHub Actions</b>, <b>Docker</b>,{" "}
+        including <b>Jenkins</b>, <b>GitHub Actions</b>, <b>Docker</b>,{' '}
         <b>Cypress</b> and <b>Cucumber</b>.
       </article>
     </div>

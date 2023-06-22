@@ -1,7 +1,7 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image';
+import Link from 'next/link';
 
-interface IconTextProps extends React.ComponentPropsWithoutRef<"div"> {
+interface IconTextProps extends React.ComponentPropsWithoutRef<'div'> {
   svgIconName: string;
   linkUrl?: string;
   text?: string;
@@ -11,8 +11,8 @@ interface IconTextProps extends React.ComponentPropsWithoutRef<"div"> {
 const IconText: React.FC<IconTextProps> = (props) => {
   const {
     svgIconName,
-    linkUrl = "",
-    textStyle = "",
+    linkUrl = '',
+    textStyle = '',
     text,
     children,
     className,
