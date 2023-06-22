@@ -1,11 +1,11 @@
-import Image from "next/image";
-import "./globals.css";
-import MenuItem from "./components/menuItem";
-import { ThemeProvider, TailwindBody } from "./contexts/theme";
-import ChangeThemeButton from "./components/changeTheme";
+import Image from 'next/image';
+import './globals.css';
+import MenuItem from './components/menuItem';
+import { ThemeProvider, TailwindBody } from './contexts/theme';
+import ChangeThemeButton from './components/changeTheme';
 
 export const metadata = {
-  title: "Andrii Bohdan",
+  title: 'Andrii Bohdan',
   description: "Andrii Bohdan's portfolio",
 };
 
