@@ -3,7 +3,7 @@ import Image from 'next/image';
 const ExperiencePage = () => {
   return (
     <div className="grow">
-      <div className="flex flex-col space-y-3 pr-20 mb-4">
+      <div className="flex flex-col space-y-3 pr-12 mb-4">
         <h1 className="font-mono text-4xl font-medium">My experience</h1>
         <p className="text-lg">
           In my fresh career I have worked in multiple <b>full-stack</b> teams,
