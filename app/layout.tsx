@@ -33,7 +33,7 @@ export default function RootLayout({
             height="762"
           />
           <main className="container flex flex-col py-7 px-4 space-y-2 laptop:min-w-laptop tablet:min-w-tablet tablet:flex-row tablet:space-y-0 tablet:space-x-2">
-            <nav className="flex flex-col px-2 space-y-3">
+            <nav className="flex flex-col px-7 space-y-3">
               <div>
                 <Image
                   src="logo-md-l.svg"
