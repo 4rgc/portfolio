@@ -51,7 +51,7 @@ export default function RootLayout({
                 />
               </div>
               <div className="flex items-center space-x-4 tablet:flex-col tablet:items-start tablet:space-x-0 tablet:space-y-2">
-                <MenuItem text="home" />
+                <MenuItem text="home" href="/" />
                 <MenuItem text="experience" href="/experience" />
                 <MenuItem text="projects" href="/projects" />
                 <MenuItem text="blog" href="/contact" />

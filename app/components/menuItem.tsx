@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 
 export interface MenuItemProps extends React.ComponentPropsWithoutRef<'span'> {
   text: string;
-  href?: string;
+  href: string;
 }
 
 const MenuItem: React.FC<MenuItemProps> = ({ text, href }) => {
@@ -14,14 +14,12 @@ const MenuItem: React.FC<MenuItemProps> = ({ text, href }) => {
   return (
     <Link
       className="text-lightSecondary dark:text-darkSecondary font-mono"
-      href={href || ''}
+      href={href}
     >
       {text}
       <div
         className={`bg-lightSecondary dark:bg-darkSecondary h-0.5 ${
-          (href && pathname.includes(href)) || (!href && pathname === '/')
-            ? 'block'
-            : 'hidden'
+          href === pathname ? 'block' : 'hidden'
         }`}
       />
     </Link>
