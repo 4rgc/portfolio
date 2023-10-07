@@ -22,7 +22,7 @@ const ExperiencePage = () => {
             </div>
             <div className="flex flex-col">
               <div className="text-lightContrast dark:text-darkContrast px-3 mb-2">
-                Incoming Aug 2023
+                Aug 2023 - Present
               </div>
               <div className="flex grow-1 pl-2 gap-4 mb-4">
                 <Image
@@ -46,7 +46,10 @@ const ExperiencePage = () => {
                   </h2>
                 </div>
               </div>
-              <p>Incoming Full Stack Developer on the Flow team</p>
+              <p>
+                Working on the Flow team bringing artists from different
+                software isles closer together
+              </p>
             </div>
           </div>
         </li>
@@ -59,7 +62,7 @@ const ExperiencePage = () => {
             </div>
             <div className="flex flex-col pt-8">
               <div className="text-lightContrast dark:text-darkContrast mb-2 px-3">
-                May 2022 - Present
+                May 2022 - Aug 2023
               </div>
               <div className="flex grow-1 pl-2 gap-4 mb-4">
                 <Image
