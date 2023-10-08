@@ -5,22 +5,6 @@ type ExperienceItemProps = ExperienceDataItem & {
   position: 'first' | 'middle' | 'last';
 };
 
-const ExperienceItemDescription: React.FC<
-  Pick<ExperienceItemProps, 'description'>
-> = ({ description }) =>
-  description.length &&
-  (description.length > 1 ? (
-    <ul className="list-disc list-inside grid gap-4">
-      {description.map((item, idx) => (
-        <li key={idx} className="mb-1">
-          {item}
-        </li>
-      ))}
-    </ul>
-  ) : (
-    <p>{description[0]}</p>
-  ));
-
 const ExperienceItemTimeline: React.FC<
   Pick<ExperienceItemProps, 'position'>
 > = ({ position }) => (
@@ -41,6 +25,52 @@ const ExperienceItemTimeline: React.FC<
   </div>
 );
 
+const ExperienceItemHeader: React.FC<
+  Pick<ExperienceItemProps, 'period' | 'iconName' | 'companyName' | 'title'>
+> = ({ period, iconName, companyName, title }) => (
+  <>
+    <div className="text-lightContrast dark:text-darkContrast px-3 mb-2">
+      {period}
+    </div>
+    <div className="flex grow-1 pl-2 gap-4 mb-4">
+      <Image
+        src={`${iconName}-d.svg`}
+        width={35}
+        height={23.9}
+        alt={`${companyName} Logo`}
+        className="hidden dark:block"
+      />
+      <Image
+        src={`${iconName}-l.svg`}
+        width={35}
+        height={23.9}
+        alt={`${companyName} Logo`}
+        className="block dark:hidden"
+      />
+      <div className="flex flex-col gap-0.5">
+        <h2 className="text-l">{companyName}</h2>
+        <h2 className="text-l font-semibold">{title}</h2>
+      </div>
+    </div>
+  </>
+);
+
+const ExperienceItemDescription: React.FC<
+  Pick<ExperienceItemProps, 'description'>
+> = ({ description }) =>
+  description.length &&
+  (description.length > 1 ? (
+    <ul className="list-disc list-inside grid gap-4">
+      {description.map((item, idx) => (
+        <li key={idx} className="mb-1">
+          {item}
+        </li>
+      ))}
+    </ul>
+  ) : (
+    <p>{description[0]}</p>
+  ));
+
 const ExperienceItem: React.FC<ExperienceItemProps> = ({
   period,
   iconName,
@@ -56,29 +86,12 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
         ['middle', 'last'].includes(position) ? 'pt-8' : ''
       }`}
     >
-      <div className="text-lightContrast dark:text-darkContrast px-3 mb-2">
-        {period}
-      </div>
-      <div className="flex grow-1 pl-2 gap-4 mb-4">
-        <Image
-          src={`${iconName}-d.svg`}
-          width={35}
-          height={23.9}
-          alt={`${companyName} Logo`}
-          className="hidden dark:block"
-        />
-        <Image
-          src={`${iconName}-l.svg`}
-          width={35}
-          height={23.9}
-          alt={`${companyName} Logo`}
-          className="block dark:hidden"
-        />
-        <div className="flex flex-col gap-0.5">
-          <h2 className="text-l">{companyName}</h2>
-          <h2 className="text-l font-semibold">{title}</h2>
-        </div>
-      </div>
+      <ExperienceItemHeader
+        period={period}
+        iconName={iconName}
+        companyName={companyName}
+        title={title}
+      />
       <ExperienceItemDescription description={description} />
     </div>
   </div>
