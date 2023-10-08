@@ -33,7 +33,7 @@ export default function RootLayout({
             height="762"
           />
           <main className="container flex flex-col py-7 px-4 space-y-2 laptop:min-w-laptop tablet:min-w-tablet tablet:flex-row tablet:space-y-0 tablet:space-x-2">
-            <nav className="flex flex-col px-2 space-y-3">
+            <nav className="flex flex-col px-7 space-y-3">
               <div>
                 <Image
                   src="logo-md-l.svg"
@@ -51,7 +51,7 @@ export default function RootLayout({
                 />
               </div>
               <div className="flex items-center space-x-4 tablet:flex-col tablet:items-start tablet:space-x-0 tablet:space-y-2">
-                <MenuItem text="home" />
+                <MenuItem text="home" href="/" />
                 <MenuItem text="experience" href="/experience" />
                 <MenuItem text="projects" href="/projects" />
                 <MenuItem text="blog" href="/contact" />
