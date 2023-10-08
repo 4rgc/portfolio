@@ -14,7 +14,7 @@ const ChangeThemeButton: React.FC<ChangeThemeButtonProps> = (props) => {
       (e) => {
         setTheme(theme === 'dark' ? 'light' : 'dark');
       },
-      [theme, setTheme]
+      [theme, setTheme],
     );
   return (
     <button onClick={onThemeChangeClick}>
