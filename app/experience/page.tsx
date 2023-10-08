@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import ExperienceItem from './ExperienceItem';
 
 const ExperiencePage = () => {
   return (
@@ -14,78 +14,27 @@ const ExperiencePage = () => {
       </div>
       <ul className="mb-8">
         <li>
-          <div className="flex">
-            <div className="mx-3 laptop:mx-5 flex flex-col items-center">
-              <div className="h-14" />
-              <div className="w-[15px] h-[15px] bg-lightContrast dark:bg-darkContrast rounded-full shrink-0" />
-              <div className="border-l-4 flex-1 border-dashed border-lightContrast dark:border-darkContrast mr-[0.05px]" />
-            </div>
-            <div className="flex flex-col">
-              <div className="text-lightContrast dark:text-darkContrast px-3 mb-2">
-                Aug 2023 - Present
-              </div>
-              <div className="flex grow-1 pl-2 gap-4 mb-4">
-                <Image
-                  src="adsk-d.svg"
-                  width={35}
-                  height={23.9}
-                  alt="Autodesk Logo"
-                  className="hidden dark:block"
-                />
-                <Image
-                  src="adsk-l.svg"
-                  width={35}
-                  height={23.9}
-                  alt="Autodesk Logo"
-                  className="block dark:hidden"
-                />
-                <div className="flex flex-col gap-0.5">
-                  <h2 className="text-l">Autodesk ShotGrid</h2>
-                  <h2 className="text-l font-semibold">
-                    Full Stack Developer (Intermediate)
-                  </h2>
-                </div>
-              </div>
+          <ExperienceItem
+            period="Aug 2023 - Present"
+            iconName="adsk"
+            companyName="Autodesk ShotGrid"
+            title="Full Stack Developer (Intermediate)"
+            description={
               <p>
                 Working on the Flow team bringing artists from different
                 software isles closer together
               </p>
-            </div>
-          </div>
+            }
+            position="first"
+          />
         </li>
         <li>
-          <div className="flex">
-            <div className="mx-3 laptop:mx-5 flex flex-col items-center">
-              <div className="h-20 border-l-4 border-dashed border-lightContrast dark:border-darkContrast mr-[0.05px]" />
-              <div className="w-[15px] h-[15px] bg-lightContrast dark:bg-darkContrast rounded-full shrink-0" />
-              <div className="border-l-4 flex-1 border-dashed border-lightContrast dark:border-darkContrast mr-[0.05px]" />
-            </div>
-            <div className="flex flex-col pt-8">
-              <div className="text-lightContrast dark:text-darkContrast mb-2 px-3">
-                May 2022 - Aug 2023
-              </div>
-              <div className="flex grow-1 pl-2 gap-4 mb-4">
-                <Image
-                  src="adsk-d.svg"
-                  width={35}
-                  height={23.9}
-                  alt="Autodesk Logo"
-                  className="hidden dark:block"
-                />
-                <Image
-                  src="adsk-l.svg"
-                  width={35}
-                  height={23.9}
-                  alt="Autodesk Logo"
-                  className="block dark:hidden"
-                />
-                <div className="flex flex-col gap-0.5">
-                  <h2 className="text-l">Autodesk ShotGrid</h2>
-                  <h2 className="text-l font-semibold">
-                    Software Engineer (Part-time)
-                  </h2>
-                </div>
-              </div>
+          <ExperienceItem
+            period="May 2022 - Aug 2023"
+            iconName="adsk"
+            companyName="Autodesk ShotGrid"
+            title="Software Engineer (Part-time)"
+            description={
               <ul className="list-disc list-inside grid gap-4">
                 <li>
                   Developed a highly customizable web-based project management
@@ -103,41 +52,17 @@ const ExperiencePage = () => {
                   of vulnerabilities.
                 </li>
               </ul>
-            </div>
-          </div>
+            }
+            position="middle"
+          />
         </li>
         <li>
-          <div className="flex">
-            <div className="mx-3 laptop:mx-5 flex flex-col items-center">
-              <div className="h-20 border-l-4 border-dashed border-lightContrast dark:border-darkContrast mr-[0.05px]" />
-              <div className="w-[15px] h-[15px] bg-lightContrast dark:bg-darkContrast rounded-full shrink-0" />
-            </div>
-            <div className="flex flex-col pt-8">
-              <div className="text-lightContrast dark:text-darkContrast px-3 mb-2">
-                Sep 2021 - May 2022
-              </div>
-              <div className="flex grow-1 pl-2 gap-4 mb-4">
-                <Image
-                  src="adsk-d.svg"
-                  width={35}
-                  height={23.9}
-                  alt="Autodesk Logo"
-                  className="hidden dark:block"
-                />
-                <Image
-                  src="adsk-l.svg"
-                  width={35}
-                  height={23.9}
-                  alt="Autodesk Logo"
-                  className="block dark:hidden"
-                />
-                <div className="flex flex-col gap-0.5">
-                  <h2 className="text-l">Autodesk ShotGrid</h2>
-                  <h2 className="text-l font-semibold">
-                    Full Stack Developer Intern
-                  </h2>
-                </div>
-              </div>
+          <ExperienceItem
+            period="Sep 2021 - May 2022"
+            iconName="adsk"
+            companyName="Autodesk ShotGrid"
+            title="Full Stack Developer Intern"
+            description={
               <ul className="list-disc list-inside grid gap-4">
                 <li>
                   Fixed complex UI bugs and extended the functionality of core
@@ -151,8 +76,9 @@ const ExperiencePage = () => {
                   and Ruby on Rails on the back-end
                 </li>
               </ul>
-            </div>
-          </div>
+            }
+            position="last"
+          />
         </li>
       </ul>
     </div>
