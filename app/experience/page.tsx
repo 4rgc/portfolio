@@ -6,21 +6,45 @@ const ExperiencePage = () => {
       <div className="flex flex-col space-y-3 pr-12 mb-4">
         <h1 className="font-mono text-4xl font-medium">My experience</h1>
         <p className="text-lg">
-          In my fresh career I have worked in multiple <b>full-stack</b> teams,
-          delivering on complex projects, development and testing infrastructure
-          upgrades for <b>modern web applications</b> with <b>&gt;50K&nbsp;</b>
+          In my career I have worked in multiple <b>full-stack</b> teams,
+          delivering on highly complex projects in fast-paced environments,
+          development and testing infrastructure upgrades for{' '}
+          <b>modern web applications</b> with <b>&gt;50K&nbsp;</b>
           active users.
         </p>
       </div>
       <ExperienceList
         experienceData={[
           {
-            period: 'Aug 2023 - Present',
+            period: 'Jan 2024 - Present',
+            iconName: 'adsk',
+            companyName: 'Autodesk Flow',
+            title: 'Full Stack Developer (Intermediate)',
+            description: [
+              'Spearheaded the design and development of the Permissions feature for Autodesk’s strategic innovation ' +
+                'product in M&E, Flow Platform, working closely with a Principal SWE, Product Managers, QA, ' +
+                'collaborating across 3 different teams while providing support to three teammates throughout its ' +
+                'implementation',
+              'Led the design and implementation of six GraphQL API endpoints, contributing to the design of six more',
+              'Enhanced testability and reliability by designing an extensible interface for external GraphQL API ' +
+                'integration, introducing mocking capabilities for application-level testing',
+              'Eliminated release-blocking issues and improved system stability and performance by identifying and ' +
+                'reporting three critical race conditions across eight services',
+            ],
+          },
+          {
+            period: 'Aug 2023 - Jan 2024',
             iconName: 'adsk',
             companyName: 'Autodesk ShotGrid',
             title: 'Full Stack Developer (Intermediate)',
             description: [
-              'Working on the Flow team bringing artists from different software isles closer together',
+              'Developed a preview version of a highly flexible integration of Autodesk Flow and ShotGrid, allowing ' +
+                'charter customers to seamlessly view and edit assets created in Maya, Moxion and Houdini',
+              'Collaborated with the Data Model team to resolve release-blocking issues with OAuth authentication ' +
+                'and add functionality to the GraphQL API',
+              'Substantially optimized developer workflows by crafting custom scripts for HTTP interaction ' +
+                'recordings regeneration and auth token retrieval, and presented refactor opportunities to the team ' +
+                'using UML diagrams',
             ],
           },
           {
