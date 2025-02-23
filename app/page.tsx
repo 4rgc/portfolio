@@ -1,8 +1,19 @@
+import * as dateFns from 'date-fns';
+
 import Portrait from './components/portrait';
 import Headline from './components/Headline';
 import IconText from './components/iconText';
 
 export default function Home() {
+  const careerStartDate = dateFns.parse(
+    '2021-09-01 00:00 -0500',
+    'yyyy-MM-dd HH:mm xx',
+    new Date(),
+  );
+  const careerDurationYears = dateFns.differenceInYears(
+    dateFns.constructNow(new Date()),
+    careerStartDate,
+  );
   return (
     <div className="grow">
       <div className="flex items-center pb-3 space-x-6">
@@ -52,17 +63,20 @@ export default function Home() {
         </div>
       </div>
       <article className="text-lg">
-        I have <b>2 years</b> of full-stack industry experience in developing
-        complex web-based SaaS products, and even more with my personal
-        projects.
+        I have{' '}
+        <b>{`${careerDurationYears} ${
+          careerDurationYears > 1 ? 'years' : 'year'
+        }`}</b>{' '}
+        of full-stack industry experience in developing complex web-based SaaS
+        products, and even more with my personal projects.
         <br />
         <br />
         My expertise includes developing complex web UIs using <b>
           React
         </b> and <b>Next.js</b>, building robust back-ends with{' '}
-        <b>Express.js</b> or <b>Ruby on Rails</b>, implementing secure
-        authentication and authorization systems, and optimizing the performance
-        and stability of <b>Node.js</b> tooling.
+        <b>Express.js</b>, <b>Ruby on Rails</b> and <b>Python</b>, implementing
+        secure authentication and authorization systems, and optimizing the
+        performance and stability of <b>Node.js</b> tooling.
         <br />
         <br />I also confidently navigate the integration and deployment realm
         including <b>Jenkins</b>, <b>GitHub Actions</b>, <b>Docker</b>,{' '}
