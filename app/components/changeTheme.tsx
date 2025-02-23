@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { useCallback, useContext } from 'react';
 import { ThemeContext } from '../contexts/theme';
+
 interface ChangeThemeButtonProps
   extends React.ComponentPropsWithoutRef<'button'> {}
 
