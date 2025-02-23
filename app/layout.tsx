@@ -3,6 +3,7 @@ import './globals.css';
 import MenuItem from './components/menuItem';
 import { ThemeProvider, TailwindBody } from './contexts/theme';
 import ChangeThemeButton from './components/changeTheme';
+import { Analytics } from '@vercel/analytics/react';
 
 export const metadata = {
   title: 'Andrii Bohdan',
@@ -16,6 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <Analytics />
       <ThemeProvider>
         <TailwindBody className="flex overflow-x-hidden justify-center pb-6">
           <Image

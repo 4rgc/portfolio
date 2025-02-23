@@ -3,7 +3,6 @@
 import { Fira_Mono, Poppins } from 'next/font/google';
 import {
   ComponentPropsWithoutRef,
-  Context,
   createContext,
   useContext,
   useState,
