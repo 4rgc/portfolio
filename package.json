@@ -16,7 +16,7 @@
     "autoprefixer": "10.4.16",
     "date-fns": "^4.1.0",
     "eslint": "9.21.0",
-    "next": "15.5.9",
+    "next": "16.1.5",
     "postcss": "8.4.31",
     "react": "19.0.0",
     "react-dom": "19.0.0",
